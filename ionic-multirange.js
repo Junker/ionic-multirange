@@ -1,7 +1,7 @@
 (function (ng) {
 "use strict";
 
-    var module = ng.module('ionic-multiselect', []);
+    var module = ng.module('ionic-multirange', []);
 
     module.directive('uiMultiRange', ['$compile', function ($compile) {
         var directive = {

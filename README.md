@@ -22,6 +22,6 @@ Ionic v1 multi range component
 ```
 
 ```javascript
-	angular.module('aimdate', ['ionic', 'ionic-multiselect']);
+	angular.module('aimdate', ['ionic', 'ionic-multirange']);
 
 ```
