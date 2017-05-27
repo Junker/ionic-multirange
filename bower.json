@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "homepage": "https://github.com/Junker/ionic-multirange",
   "authors": [
-    "Dmitrii Kosenkov <dk-junker at ya.ru>"
+    "Dmitry Kosenkov <dk-junker at ya.ru>"
   ],
   "description": "ionic directive for multiple range",
   "keywords": [
