@@ -1,0 +1,25 @@
+{
+  "name": "ionic-multirange",
+  "main": "ionic-multirange.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/LightZam/zInfiniteScroll",
+  "authors": [
+    "Dmitrii Kosenkov <dk-junker at ya.ru>"
+  ],
+  "description": "ionic directive for multiple range",
+  "keywords": [
+    "angular",
+    "ionic",
+    "multiple",
+    "range"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "example",
+    "test",
+    "tests"
+  ]
+}
