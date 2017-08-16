@@ -27,6 +27,6 @@ bower install ionic-multirange --save
 ```
 
 ```javascript
-angular.module('aimdate', ['ionic', 'ionic-multirange']);
+angular.module('myapp', ['ionic', 'ionic-multirange']);
 
 ```
