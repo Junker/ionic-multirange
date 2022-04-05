@@ -27,7 +27,7 @@ ui-multi-range input[type=range] {
 ui-multi-range input[type=range]:active,
 ui-multi-range input[type=range]:focus {
     outline: none;
-} 
+}
 
 ui-multi-range input[type=range]::-webkit-slider-thumb {
     position: relative;
@@ -48,6 +48,7 @@ ui-multi-range input[type=range]::-webkit-slider-thumb::before {
 
 ui-multi-range input[type=range]:nth-child(2) {
     background: none;
+    margin-left: 10px;
 }
 
 ui-multi-range input[type=range]:nth-child(2)::-webkit-slider-thumb::before {

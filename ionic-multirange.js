@@ -12,6 +12,7 @@
                 ngMin: '=',
                 ngMax: '=',
                 ngStep: '=',
+                ngDiff: '=',
                 ngChangeMin: '&',
                 ngChangeMax: '&'
             },
@@ -21,10 +22,15 @@
         return directive;
 
         function link ($scope, $element, $attrs) {
-            var min, max, step, $inputMin = angular.element('<input type="range">'), $inputMax;
+            var min, max, step, diff, $inputMin = angular.element('<input type="range">'), $inputMax;
             $scope.ngChangeMin = $scope.ngChangeMin || angular.noop;
             $scope.ngChangeMax = $scope.ngChangeMax || angular.noop;
 
+            if (typeof $scope.ngDiff == 'undefined') {
+                diff = 0;
+            } else {
+                diff = $scope.ngDiff;
+            }
             if (typeof $scope.ngMin == 'undefined') {
                 min = 0;
             } else {
@@ -43,7 +49,9 @@
                 step = $scope.ngStep;
                 $inputMin.attr('step', step);
             }
+
             $inputMax = $inputMin.clone();
+
             $inputMin.attr('ng-model', 'ngModelMin');
             $inputMax.attr('ng-model', 'ngModelMax');
             $compile($inputMin)($scope);
@@ -53,7 +61,7 @@
             $scope.ngModelMax = $scope.ngModelMax || max;
 
             $scope.$watch('ngModelMin', function (newVal, oldVal) {
-                if (newVal > $scope.ngModelMax) {
+                if (newVal > ($scope.ngModelMax - diff)) {
                     $scope.ngModelMin = oldVal;
                 } else {
                     $scope.ngChangeMin();
@@ -61,7 +69,7 @@
             });
 
             $scope.$watch('ngModelMax', function (newVal, oldVal) {
-                if (newVal < $scope.ngModelMin) {
+                if (newVal < ($scope.ngModelMin + diff)) {
                     $scope.ngModelMax = oldVal;
                 } else {
                     $scope.ngChangeMax();
