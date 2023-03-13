@@ -1,0 +1,19 @@
+{
+  "name": "ionic-multirange",
+  "main": "ionic-multirange.js",
+  "version": "0.1.1",
+  "homepage": "https://github.com/Junker/ionic-multirange",
+  "author": "",
+  "description": "ionic directive for multiple range",
+  "keywords": [
+    "angular",
+    "ionic",
+    "multiple",
+    "range"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Junker/ionic-multirange.git"
+  }
+}
